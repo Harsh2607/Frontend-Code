@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multimedia</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .heading {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px;
+            text-transform: uppercase;
+        }
+        .multimedia-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .multimedia {
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Multimedia</h1>
+    <div class="multimedia-container">
+        <img
+            class="multimedia"
+            alt="random image"
+            src="https://picsum.photos/200/300"
+            title="Random Image"
+        />
+        <video
+            class="multimedia"
+            alt="random video"
+            title="Random Video"
+            src="https://www.w3schools.com/html/movie.mp4"
+            width="30%"
+            height="30%"
+            controls
+            loop
+            autoplay
+            muted
+            poster=""
+        ></video>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
