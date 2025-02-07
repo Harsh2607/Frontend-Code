@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FORM</title>
+    <style>
+        output {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML - Forms</h1>
+    <p>Forms are used to collect user input. The HTML form element is used to create an HTML form for user input.</p>
+    <hr>
+    <br>
+
+    <form action="" method="post">
+        <fieldset>
+            <legend>User Details</legend>
+            <div>
+                <label for="name">Name:&nbsp;</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" title="Enter your name" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="age">Age:&nbsp;</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age" title="Enter your age" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="dob">Date of Birth:&nbsp;</label>
+                <input type="date" id="dob" name="dob" title="Enter your Date of Birth" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="simple-range">Simple Range:&nbsp;</label>
+                <input type="range" id="simple-range" name="simple-range" title="Select your age" required min="1" max="100" step="1" oninput="rangeValue.value=parseInt(simpleRange.value)">
+                <output id="rangeValue">0</output>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="range">Experience:&nbsp;</label>
+                <input type="range" id="range" name="range" title="Select your experience" required min="0"
+                    max="10" step="2" list="experience" oninput="experienceValue.value=parseInt(range.value)">
+                <output id="experienceValue">0</output>
+                <datalist id="experience">
+                    <option value="0" label="Entry Level"></option>
+                    <option value="2" label="Fresher"></option>
+                    <option value="4" label="Experienced"></option>
+                    <option value="6" label="Senior"></option>
+                    <option value="8" label="Team Lead"></option>
+                    <option value="10" label="Manager"></option>
+                </datalist>
+            </div>
+
+            <br>
+
+            <div>
+                <label>Gender:&nbsp;</label>
+                <input type="radio" id="male" name="gender" value="male" title="Male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" title="Female" required>
+                <label for="female">Female</label>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="email">Email:&nbsp;</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" title="Enter your email" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="phone">Phone:&nbsp;</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" title="Enter your phone number" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="country">Country:&nbsp;</label>
+                <input type="text" id="country" name="country" placeholder="Enter your country" title="Enter your country" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="city">City:&nbsp;</label>
+                <select id="city" name="city" title="Select your city" required>
+                    <option value="" disabled selected>Select your city</option>
+                    <option value="newyork">Bangalore</option>
+                    <option value="losangeles">Delhi</option>
+                    <option value="chicago">Mumbai</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="color">Color:</label>
+                <input type="color" id="color" name="color" title="Choose your favorite color">
+            </div>
+
+            <br>
+
+            <div>
+                <label for="password">Password:&nbsp;</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" title="Enter your password" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label>Skills:</label>
+                <input type="checkbox" id="html" name="html" value="html" title="HTML">
+                <label for="html">HTML</label>
+                <input type="checkbox" id="css" name="css" value="css" title="CSS">
+                <label for="css">CSS</label>
+                <input type="checkbox" id="javascript" name="javascript" value="javascript" title="JavaScript">
+                <label for="javascript">JavaScript</label>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="resume">Resume:&nbsp;</label>
+                <input type="file" id="resume" name="resume" title="Upload your resume" accept=".pdf .doc .docx" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="feedback">Feedback:&nbsp;</label>
+                <textarea id="feedback" name="feedback" placeholder="Enter your feedback" title="Enter your feedback" required></textarea>
+            </div>
+
+            <br>
+
+            <div>
+                <button type="submit" title="Submit the form">Submit</button>
+                <button type="reset" title="Reset the form">Reset</button>
+            </div>
+        </fieldset>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
+
