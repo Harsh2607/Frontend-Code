@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - Patterns for Frontend Validation</title>
+</head>
+<body>
+    <h1>HTML Forms - Patterns for Frontend Validation</h1>
+    <form action="" method="post">
+        <!-- First Name Validation -->
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" pattern="^[A-Za-z]{1,50}$" title="First Name" required>
+        <br>
+        <sub>Max 15 characters allowed (A-Z, a-z)</sub>
+        <br><br>
+        <!-- Password Validation -->
+        <label for="password">Password:</label>
+        <!-- Min 8 characters -->
+        <input type="text" id="password" name="password" title="Password" 
+            pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])[A-Za-z0-9!@#\$%\^&\*]{8,}$"
+            required
+        >
+        <br>
+        <sub>At least 8 characters, containing one uppercase, one lowercase, one number, one special character(!@#$%^&*)</sub>
+        <br><br>
+        <!-- Email Validation -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" title="Email"
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            required
+        >
+        <br>
+        <sub>Must be a valid email address (example: 5oHbI@example.com)</sub>
+        <br><br>
+        <!-- Submit button -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
