@@ -1,10 +1,82 @@
+/* Universal selector */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Element or tag selector */
 h2 {
   color: red;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ID selector */
 #main {
   background-color: lightblue;
   padding: 20px;
+}
+
+/* Class selector */
+.para {
+  color: darkcyan;
+  font-family: cursive;
+}
+
+/* Class selector */
+.addon {
+  background-color: white;
+  font-weight: bold;
+}
+
+/* Attribute selector */
+input[type="email"] {
+  background-color: #d3d3d3;
+  border-radius: 5px;
+}
+
+/* Pseudo-class selector */
+input[type="text"]:hover {
+  background-color: lightgreen;
+}
+
+/* Pseudo-element selector */
+input[type="email"]::placeholder {
+  color: red;
+  font-style: italic;
+}
+
+/* Pseudo-class selector */
+input[type="email"]:focus {
+  background-color: lightblue;
+}
+
+/* Descendant selector */
+div pre {
+  color: darkgoldenrod;
+  font-style: italic;
+}
+
+/* Child selector */
+div > pre {
+  color: blue;
+  font-family: cursive;
+}
+
+/* Adjacent sibling selector */
+h3 + pre {
+  color: green;
+  font-family: cursive;
+}
+
+/* General sibling selector */
+h4 ~ pre {
+  color: brown;
+  font-family: cursive;
+}
+
+/* Group selector */
+h5,
+h6 {
+  color: darkblue;
+  font-family: cursive;
 }
