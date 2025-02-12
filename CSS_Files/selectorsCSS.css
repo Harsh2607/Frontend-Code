@@ -1,82 +1,183 @@
-/* Universal selector */
+/*******************************************
+ * SIMPLE SELECTORS
+ *******************************************/
+
+/* Universal selector (*) - Matches all elements */
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Element or tag selector */
+/* Element/Type selector - Selects all elements of specified type */
 h2 {
   color: red;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ID selector */
+/* ID selector (#) - Selects element with specific ID */
 #main {
   background-color: lightblue;
   padding: 20px;
 }
 
-/* Class selector */
+/* Class selector (.) - Selects all elements with specific class */
 .para {
   color: darkcyan;
   font-family: cursive;
 }
 
-/* Class selector */
 .addon {
   background-color: white;
   font-weight: bold;
 }
 
-/* Attribute selector */
+/*******************************************
+ * ATTRIBUTE SELECTORS
+ *******************************************/
+
+/* [attribute="value"] - Matches elements with specific attribute value */
 input[type="email"] {
   background-color: #d3d3d3;
   border-radius: 5px;
 }
 
-/* Pseudo-class selector */
+/*******************************************
+ * PSEUDO-CLASS SELECTORS
+ *******************************************/
+
+/* :hover - Matches elements being hovered over */
 input[type="text"]:hover {
   background-color: lightgreen;
 }
 
-/* Pseudo-element selector */
+/* :focus - Matches elements that have keyboard focus */
+input[type="email"]:focus,
+input:focus {
+  background-color: lightblue;
+}
+
+/* :active - Matches active elements */
+input[type="text"]:active {
+  border-color: darkgreen;
+}
+
+button:active {
+  background-color: lightcoral;
+}
+
+/* :enabled - Matches enabled elements */
+input:enabled {
+  border-color: green;
+}
+
+/* :disabled - Matches disabled elements */
+input:disabled {
+  background-color: lightgray;
+  border-color: gray;
+}
+
+/* Link states */
+a:active {
+  color: red;
+}
+a:visited {
+  color: blue;
+}
+a:hover {
+  color: green;
+}
+a:focus {
+  outline: 2px solid orange;
+}
+
+/*******************************************
+ * PSEUDO-ELEMENT SELECTORS
+ *******************************************/
+
+/* ::placeholder - Styles placeholder text */
 input[type="email"]::placeholder {
   color: red;
   font-style: italic;
 }
 
-/* Pseudo-class selector */
-input[type="email"]:focus {
-  background-color: lightblue;
-}
+/*******************************************
+ * COMBINATORS
+ *******************************************/
 
-/* Descendant selector */
+/* Descendant selector (space) - Matches nested elements */
 div pre {
   color: darkgoldenrod;
   font-style: italic;
 }
 
-/* Child selector */
+/* Child selector (>) - Matches direct children only */
 div > pre {
   color: blue;
   font-family: cursive;
 }
 
-/* Adjacent sibling selector */
+/* Adjacent sibling selector (+) - Matches next sibling */
 h3 + pre {
   color: green;
   font-family: cursive;
 }
 
-/* General sibling selector */
+/* General sibling selector (~) - Matches all following siblings */
 h4 ~ pre {
   color: brown;
   font-family: cursive;
 }
 
-/* Group selector */
+/*******************************************
+ * GROUPING SELECTORS
+ *******************************************/
+
+/* Comma-separated list of selectors */
 h5,
 h6 {
   color: darkblue;
   font-family: cursive;
+}
+
+/*******************************************
+ * STRUCTURAL PSEUDO-CLASSES
+ *******************************************/
+
+/* Table styles */
+table {
+  width: 80%;
+  height: 400px;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: lightgray;
+}
+
+/* :nth-child(odd) - Matches odd-numbered children */
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/* :first-child - Matches first child element */
+tr:first-child {
+  background-color: lightblue;
+}
+
+/* :last-child - Matches last child element */
+tr:last-child {
+  background-color: lightgreen;
+}
+
+/* :only-child - Matches elements that are the only child */
+tr:only-child {
+  background-color: lightcoral;
 }

@@ -1,41 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Selectors in CSS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Demo</title>
     <link rel="stylesheet" href="selectorsCSS.css">
 </head>
+
 <body>
-    <h2 id="main">Main Heading</h2>
+    <main class="container">
+        <!-- Universal selector -->
+        <header>
+            <h2 id="main">Main Heading</h2>
+        </header>
 
-    <h3>Sub Heading</h3>
-    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, odio?</p>
+        <!-- Element selector -->
+        <section class="text-section">
+            <h3>Sub Heading</h3>
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, odio?</p>
 
-    <h3>Sub Heading</h3>
-    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, reprehenderit!</p>
-    <p class="para addon">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, omnis!</p>
+            <h3>Sub Heading</h3>
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+                reprehenderit!</p>
+            <p class="para addon">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestias, omnis!</p>
+        </section>
 
-    <input type="text">
-    <br><br>
-    <input type="email">
-    <br><br>
+        <!-- ID selector -->
+        <section class="form-section">
+            <form>
+                <div class="form-group">
+                    <label for="text-input">Text Input:</label>
+                    <input type="text" id="text-input" placeholder="Enter text here">
+                </div>
 
-    <div>
-        Text inside div tag
-        <article>
-            <pre>Text inside article tag with pre tag</pre>
-        </article>
-        <pre>Text inside div tag with pre tag</pre>
-    </div>
+                <div class="form-group">
+                    <label for="email-input">Email Input:</label>
+                    <input type="email" id="email-input" placeholder="Enter email here">
+                </div>
+            </form>
+        </section>
 
-    <h3>Sub Heading</h3>
-    <pre>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, recusandae?</pre>
-    <pre>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, recusandae?</pre>
+        <!-- Class selector -->
+        <section class="nested-section">
+            <div class="content-wrapper">
+                <p>Text inside div tag</p>
+                <article>
+                    <pre>Text inside article tag with pre tag</pre>
+                </article>
+                <pre>Text inside div tag with pre tag</pre>
+            </div>
 
-    <h3>Sub Heading</h3>
-    <pre>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, recusandae?</pre>
+            <h3>Sub Heading</h3>
+            <pre>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, recusandae?</pre>
+            <pre>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, recusandae?</pre>
 
-    <h4>Sub Heading</h4>
-    <pre>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, recusandae?</pre>
-    <pre>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, recusandae?</pre>
+            <h3>Sub Heading</h3>
+            <pre>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, recusandae?</pre>
+
+            <h4>Sub Heading</h4>
+            <pre>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, recusandae?</pre>
+            <pre>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, recusandae?</pre>
+        </section>
+
+        <!-- Attribute selector -->
+        <section class="table-section">
+            <table>
+                <caption>Sample Data Table</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Row Number</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Row 1</td>
+                        <td>First row data</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2</td>
+                        <td>Second row data</td>
+                    </tr>
+                    <tr>
+                        <td>Row 3</td>
+                        <td>Third row data</td>
+                    </tr>
+                    <tr>
+                        <td>Row 4</td>
+                        <td>Fourth row data</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 </body>
+
 </html>
+
