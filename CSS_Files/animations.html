@@ -1,0 +1,45 @@
+<style>
+    p {
+        background-color: blue;
+        height: 200px;
+        width: 200px;
+        /* animation: changeColor 1s infinite ease-in-out; */
+        animation: multiColor 5s infinite ease-in-out;
+    }
+
+    @keyframes changeColor {
+        from {
+            background-color: blue;
+        }
+
+        to {
+            background-color: orange;
+        }
+    }
+
+    @keyframes multiColor {
+        0% {
+            background-color: blue;
+        }
+
+        25% {
+            background-color: red;
+        }
+
+        50% {
+            background-color: yellow;
+        }
+
+        75% {
+            background-color: black;
+        }
+
+        100% {
+            background-color: green;
+        }
+    }
+</style>
+
+<body>
+    <p></p>
+</body>
